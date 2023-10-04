@@ -1,0 +1,266 @@
+/* =================
+Variables & Misc
+====================*/
+
+:root {
+    --primary-colour: #1C1D43;
+    --secondary-colour: #ffffff;
+    --primary-accent-colour: #00B874;
+    font-size: 15px;
+}
+
+body {
+    font-size: 8px;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 16px;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+ 
+    /*
+      Introduced in IE 10.
+      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+    */
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#map {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    background-color: #6451db;
+    z-index: 0;
+    width: 100%;
+}
+
+/* img.leaflet-tile{ 
+    border: solid black 5px; } */
+
+/* =================
+Typography
+====================*/
+
+h1 {
+    margin: -1;
+}
+
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =================
+Layout
+====================*/
+
+nav {
+    width: 75%;
+    margin: 0 auto;
+    min-width: 1450px;
+}
+
+header {
+    background-color: transparent;
+}
+
+.container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.nav-pill {
+    font-weight: 800;
+    font-size: .85rem;
+    text-transform: uppercase;
+    border: 0;
+    padding: 0 2em 0 0;
+    height: 3rem;
+    background-color: var(--primary-colour);
+    color: white;
+    border-radius: 2em;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    line-height: 3rem;
+}
+
+.nav-btn {
+    cursor: pointer;
+    margin-left: 2em;
+}
+
+.nav-btn:active {
+    transform: scale(0.95);
+}
+
+.nav-btn.active {
+    background-color: #00a668;
+}
+
+.nav-link {
+    font-weight: 800;
+    font-size: 1.25rem;
+    height: 3rem;
+    line-height: 3rem;
+    margin-left: 1.5rem;
+}
+
+.nav-link a {
+    padding: .5rem 1rem;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: #40378F;
+    border-radius: 10px;
+}
+
+.nav-logo {
+    padding: 0 2em;
+    background-color: var(--primary-accent-colour);
+    cursor: default;
+}
+
+.nav-logo-text {
+    margin-left: .5rem;
+    display: inline-block;
+    line-height: 1rem;
+    text-align: left;
+    vertical-align: middle;;
+}
+
+img {
+    height: 60%;
+    width: auto;
+    display: inline;
+    vertical-align: middle;
+}
+
+.nav-icon {
+    display: inline-block;
+    width: 3.2rem;
+    height: 100%;
+    margin: -2px 1rem 0 -2px;
+    vertical-align: middle;
+    border-radius: 50%;
+    background-color: #2B2D66;
+}
+
+.nav-icon.active {
+    background-color: var(--primary-accent-colour);
+}
+
+.click {
+    cursor: pointer;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    left: 32.5%;
+    top: 30%;
+    width: 35%;
+    padding: 20px;
+    background-color: #EDF4F5;
+    color: black;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid silver;
+}
+
+.modal-header {
+    margin-top: -20px;
+}
+
+.modal-header i {
+    font-size: 25px;
+}
+
+.nametag {
+    font-weight: 500;
+    color:#00a668;
+}
+
+@media screen and (max-width: 1450px) {
+    nav ul {
+      flex-direction: column;
+      margin-left: 1rem;
+    }
+
+    .nav-icon {
+        margin-right: 0;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    .nav-btn {
+        margin: 1rem 0 0 0;
+    }
+
+    .nav-btn-label {
+        display: none;
+    }
+
+    .nav-pill.nav-btn{
+        padding-right: 0;
+    }
+    .nav-link {
+        display: none;
+    }
+    .container {
+        max-width: 155px;
+        min-width: 155px;
+    }
+    .nav-flex {
+        display: inline;
+    }
+}
+
+
+/* RANDOM TESTS */
+
+.leaflet-tooltip-left, .leaflet-tooltip-right {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.leaflet-tooltip-right.tooltip-custom {
+    /* left: 20px; */
+    background-color: rgb(249, 236, 203, 1);
+    border: none;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.leaflet-tooltip-right.tooltip-custom::before {
+    border-right-color: rgb(249, 236, 203, 1);
+}
+
+.leaflet-tooltip-right.tooltip-custom h3, .leaflet-tooltip-right.tooltip-custom p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.leaflet-tooltip-right.tooltip-custom p {
+    color: #828173;
+    margin-top: -2px;
+}

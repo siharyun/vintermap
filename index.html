@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- HTML Meta Tags -->
+    <title>Vinter Map - Interactive Map for Longvinter</title>
+    <meta name="theme-color" content="#63C7A2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#61a480">
+    <meta name="msapplication-TileColor" content="#61a480">
+    <meta name="theme-color" content="#61a480">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/40f50f2ac6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2KF0G4PC38"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-2KF0G4PC38');
+    </script>
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+        <div id="map"></div>
+        <div class="container">
+            <nav class="nav-flex">
+                <ul>
+                    <li><button class="nav-pill nav-logo"><img src="img/longvinter-logo.png"><span class="nav-logo-text">Vinter<br>Map</span></button></li>
+                    <li><button class="nav-pill nav-btn port active"><span class="nav-icon active"><i class="fa-solid fa-ship"></i></span><span class="nav-btn-label">Ports</span></button></li>
+                    <li><button class="nav-pill nav-btn feather"><span class="nav-icon"><i class="fa-solid fa-feather-pointed"></i></span><span class="nav-btn-label">Feathers</span></button></li>
+                    <li><button class="nav-pill nav-btn fish"><span class="nav-icon "><i class="fa-solid fa-fish"></i></span><span class="nav-btn-label">Fish</span></button></li>
+                    <li><button class="nav-pill nav-btn plant"><span class="nav-icon"><i class="fa-solid fa-seedling"></i></span><span class="nav-btn-label">Plants</span></button></li>
+                    <li><button class="nav-pill nav-btn shop"><span class="nav-icon"><i class="fa-solid fa-store"></i></span><span class="nav-btn-label">Shops</span></button></li>
+                    <li><button class="nav-pill nav-btn monument"><span class="nav-icon"><i class="fa-solid fa-landmark"></i></span><span class="nav-btn-label">Monuments</span></button></li>
+                </ul>
+                <ul>
+                    <li class="nav-link"><a href="https://twitter.com/wosps" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li class="nav-link"><a href="https://discord.gg/longvinter" target="_blank"><i class="fa-brands fa-discord"></i></a></li>
+                    <li class="nav-link"><a href="https://store.steampowered.com/app/1635450/Longvinter/" target="_blank"><i class="fa-brands fa-steam-symbol"></i></a></li>
+                    <li class="nav-link"><a class = "click" onclick="toggleModal()"><i class="fa-solid fa-question"></a></i>
+                </ul>
+            </nav>
+        </div>
+        <div id="modal" style="display: none;">
+                <div class="modal-header">
+                    <h1>Thanks for using Vinter Map!</h1>
+                    <i onclick="toggleModal()" class="click fa-solid fa-circle-xmark"></i>
+                </div>
+                <div class="modal-main">
+                    <p>Vinter Map was made with ♥ by <a href="https://twitter.com/wosps" target="_blank">@wosps</a>.</p>
+                    <p>Special thanks to <span class="nametag">tucker#3666</span>, <span class="nametag">Bunn#2762</span>, <span class="nametag">Sir Nicolas#8642</span> and <span class="nametag">Christel#7861</span> for their assistance in locating all the items - this wouldn't have been possible without your help!</p>
+                    <p><strong>Notice a bug?</strong> <a href="https://twitter.com/messages/compose?recipient_id=306922362" target="_blank">Let me know via Twitter</a>!</p>
+                    <p><strong>Want to say thanks?</strong> The creation of Vinter Map was fuelled by coffee - <a href="https://ko-fi.com/wosps" target="_blank">you can contribute to my caffine addiction here!</a></p>
+                </div>
+        </div>
+    </main>
+    <script src="js/data/map-data.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/map-util.js"></script>
+
+</body>
+</html>
