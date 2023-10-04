@@ -24,6 +24,9 @@ var iPort = new portIcon({
 var iShopMystery = new itemIcon({
     iconUrl: 'img/icons/mystery-shop.png'
 });
+var iShopBenefit = new itemIcon({
+    iconUrl: 'img/icons/benefitstation-shop.png'
+});
 var iShopNormal = new itemIcon({
     iconUrl: 'img/icons/common-shop.png'
 });
@@ -104,6 +107,15 @@ var iFeatherCapercaillie = new itemIcon({
 });
 var iFeatherPristineCapercaillie = new itemIcon({
     iconUrl: 'img/icons/capercaillie-pristine-feather.png'
+});
+var iFeatherReindeerAntlers = new itemIcon({
+    iconUrl: 'img/icons/reindeer-antlers_feather.png'
+});
+var iFeatherPristineReindeerAntlers = new itemIcon({
+    iconUrl: 'img/icons/reindeer-antlers-pristine_feather.png'
+});
+var iFeatherWolfTooth = new itemIcon({
+    iconUrl: 'img/icons/wolf-tooth_feather.png'
 });
 
 var iFishGreen = new itemIcon({
@@ -258,6 +270,12 @@ const mapData = [
         layer: shopLayer,
         coords: [[71.5, 112], [65, -77], [-54, -119], [-3, 23], [-51, -16], [-31, -74], [20, -68], [4, -9], [18, -2], [-61, 127], [6, 18]],
     },
+	{
+        icon: iShopBenefit,
+        text: `<h3>LRI Benefits station</h3><p>Shop</p>`,
+        layer: shopLayer,
+        coords: [[-51.5, -120], [38, -124], [15, 84], [48, 9], [-34, -9]],
+    },
     {
         icon: iShopNormal,
         text: `<h3>James General Store</h3><p>Shop</p>`,
@@ -298,7 +316,7 @@ const mapData = [
         icon: iShopNPC,
         text: `<h3>Filemon</h3><p>NPC Vendor</p>`,
         layer: shopLayer,
-        coords: [[-52.75, -119], [48, 9]],
+        coords: [[-52.75, -119]],
     },
     {
         icon: iShopNPC,
@@ -307,52 +325,76 @@ const mapData = [
         coords: [[17, 82]],
     },
     {
+        icon: iShopNPC,
+        text: `<h3>Hermit</h3><p>NPC Vendor</p>`,
+        layer: shopLayer,
+        coords: [[67, 29]],
+    },
+    {
         icon: iFeatherCapercaillie,
         text: `<h3>Capercaillie</h3><p>Feather</p>`,
         layer: featherLayer,
-        coords: [[32, -155], [3, -80], [-22, -91], [-46, -80], [29, 4], [28, -37]],
+        coords: [[32, -155], [3, -80], [-22, -91], [-46, -80], [29, 4], [28, -82], [-60, -137]],
     },
     {
         icon: iFeatherPristineCapercaillie,
         text: `<h3>Pristine Capercaillie</h3><p>Feather</p>`,
         layer: featherLayer,
-        coords: [[32, -153], [3, -78], [-22, -89], [-46, -78], [29, 6], [28, -35]],
+        coords: [[32, -153], [3, -78], [-22, -89], [-46, -78], [29, 6], [28, -80], [-60, -135]],
     },
     {
         icon: iFeatherHazelHen,
         text: `<h3>Hazel Hen</h3><p>Feather</p>`,
         layer: featherLayer,
-        coords: [[-18, 28], [-21, 104], [-61, -133], [13, -126], [5, -80], [-17, -72], [-16, -4], [1, 4], [-57, 113]],
+        coords: [[-22, 38], [-21, 104], [-55, -137], [13, -126], [5, -80], [-14, -77], [-16, -4], [1, 4], [-60, 105], [-5, -35], [-34, -38], [-46, 33]],
     },
     {
         icon: iFeatherPristineHazelHen,
         text: `<h3>Pristine Hazel Hen</h3><p>Feather</p>`,
         layer: featherLayer,
-        coords: [[-18, 26], [-21, 106], [13, -128], [-62, -133], [5, -78], [-17, -70], [-16, -2], [1, 6], [-57, 115]],
+        coords: [[-22, 40], [-21, 106], [-55, -135], [13, -124], [5, -78], [-14, -75], [-16, -2], [1, 6], [-60, 107], [-5, -33], [-34, -36], [-46, 35]],
     },
     {
         icon: iFeatherKiiruna,
         text: `<h3>Kiiruna</h3><p>Feather</p>`,
         layer: featherLayer,
-        coords: [[16, 42], [52, -137], [64, -20], [43, -71], [13, 9], [22, -22]],
+        coords: [[16, 40], [52, -137], [64, -20], [43, -71], [13, 9], [22, -22], [54, 72]],
     },
     {
         icon: iFeatherPristineKiiruna,
         text: `<h3>Pristine Kiiruna</h3><p>Feather</p>`,
         layer: featherLayer,
-        coords: [[16, 40], [52, -135], [64, -18], [43, -69], [13, 11], [22, -20]],
+        coords: [[16, 42], [52, -135], [64, -18], [43, -69], [13, 11], [22, -20], [54, 74]],
     },
     {
         icon: iFeatherPeacock,
         text: `<h3>Peacock</h3><p>Feather</p>`,
         layer: featherLayer,
-        coords: [[-62, -22], [-55, -6]],
+        coords: [[-62, -22], [-55, -6], [-56, -125]],
     },
     {
         icon: iFeatherPristinePeacock,
         text: `<h3>Pristine Peacock</h3><p>Feather</p>`,
         layer: featherLayer,
-        coords: [[-62, -24], [-53.75, -6]],
+        coords: [[-62, -24], [-53.75, -6], [-56, -123]],
+    },
+    {
+        icon: iFeatherReindeerAntlers,
+        text: `<h3>Reindeer Antlers</h3><p>Feather</p>`,
+        layer: featherLayer,
+        coords: [[-61, -123], [66, -92], [26, -50], [68, -22], [68, 63], [56, 148]],
+    },
+    {
+        icon: iFeatherPristineReindeerAntlers,
+        text: `<h3>Pristine Reindeer Antlers</h3><p>Feather</p>`,
+        layer: featherLayer,
+        coords: [[-61, -121], [66, -90], [26, -48], [68, -20], [68, 65], [56, 150]],
+    },
+    {
+        icon: iFeatherWolfTooth,
+        text: `<h3>Wolf Tooth</h3><p>Feather</p>`,
+        layer: featherLayer,
+        coords: [[-41, -151], [-64, -130], [65, -57], [55, 22], [48, 135], [65, 147]],
     },
     {
         icon: iFishAutumn,
